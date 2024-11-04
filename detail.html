@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Detail - The Lion King</title>
+    <link rel="stylesheet" href="assets/style/style-detail.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <!-- Load navbar.html -->
+    <script>
+      fetch("partials/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+    <!-- Movie Detail Section -->
+    <section class="movie-detail">
+      <!-- Movie Poster and Buy Ticket Button -->
+      <div class="movie-poster">
+        <img src="assets/image/TheLionKing.png" alt="The Lion King" />
+        <!-- Buy Ticket Button -->
+        <div class="buy-ticket-container">
+          <button class="btn-buy-ticket">Buy Ticket</button>
+        </div>
+      </div>
+
+      <!-- Movie Information -->
+      <div class="movie-info">
+        <h1>The Lion King</h1>
+        <p><strong>Genre:</strong> Animation, Musical, Drama</p>
+        <p><strong>Producer:</strong> Don Hahn</p>
+        <p><strong>Director:</strong> Roger Allers, Rob Minkoff</p>
+        <p>
+          <strong>Writers:</strong> Irene Mecchi, Jonathan Roberts, Linda
+          Woolverton
+        </p>
+        <p><strong>Production:</strong> Walt Disney Feature Animation</p>
+        <p>
+          <strong>Rating:</strong> 3.9
+          <span class="star-rating">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
+            ><span>&#9733;</span><span>&#9734;</span>
+          </span>
+        </p>
+        <!-- Centered Watch Trailer Section with Lines Above and Below -->
+        <hr />
+        <div class="watch-trailer-container">
+          <a href="#" class="watch-trailer">Watch Trailer</a>
+        </div>
+        <hr />
+        <h2>Synopsis</h2>
+        <p class="description">
+          The Lion King is a classic Disney animated film that tells the story
+          of Simba, a young lion destined to become king. The story begins with
+          Simba's birth, celebrated by all the animals of the Pride Lands.
+          However, this happiness is short-lived. Simba's ambitious uncle, Scar,
+          plots to take the throne by tricking Simba, resulting in the tragic
+          death of Simba's father, Mufasa.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

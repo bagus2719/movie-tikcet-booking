@@ -1,0 +1,241 @@
+/* Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  display: flex;
+  justify-content:space-between; /* Start from left */
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo Container */
+.logo-container {
+  margin-right: 40px;
+}
+
+/* Text Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fbc02d;
+}
+
+.highlight {
+  color: white; /* Color for "Cinema" text */
+}
+
+/* Navbar Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-left: auto; /* Shift the navigation menu to the right */
+}
+
+.navbar ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.navbar ul a:hover {
+  color: #fbc02d; /* Hover color for navigation links */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Tersembunyi di layar besar */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #7c6300;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Additional style for profile menu dropdown */
+.profile-dropdown {
+  right: 0;
+  left: auto;
+  min-width: 150px;
+  background-color: #222;
+  border: 1px solid #444;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.search-container input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.search-container button {
+  padding: 8px 12px;
+  background-color: #fbc02d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #7c6300;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Menyembunyikan menu di layar kecil */
+    flex-direction: column; /* Mengatur menu menjadi kolom */
+    width: 100%; /* Memastikan lebar menu 100% */
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 80px; /* Mengatur posisi menu */
+    left: 0;
+    z-index: 10;
+  }
+
+  .navbar ul.active {
+    display: flex; /* Menampilkan menu jika aktif */
+  }
+
+  .hamburger {
+    display: flex; /* Menampilkan hamburger di layar kecil */
+  }
+}
+
+/* Booking Form Container */
+.booking-container {
+  max-width: 500px;
+  margin: 45px auto;
+  padding: 40px 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  justify-content: center;
+}
+
+.booking-container h1 {
+  font-size: 2rem;
+  color: #fbc02d;
+  margin-bottom: 20px;
+}
+
+/* Booking Form Styling */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form label {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.btn-submit {
+  background-color: #fbc02d;
+  color: #121212;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #e5a600;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBRI Cinema - Register</title>
+    <link rel="stylesheet" href="assets/style/style-register.css" />
+  </head>
+  <body>
+    <div class="background-overlay">
+      <div class="background-text">NBRI Cinema</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+      <!-- Form Container -->
+      <div class="form-container">
+        <h2 class="form-title">Form Register</h2>
+        <form id="registerForm" class="register-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Register</button>
+          <p class="toggle-message">Sudah punya akun?
+          <a type="button" class="login-button" onclick="redirectToLogin()"
+            >Login</a
+          ></p>
+        </form>
+      </div>
+
+      <!-- Right Side Container -->
+      <div class="right-container">
+        <div class="promo-text">
+          Segera Nikmati Pengalaman Menonton Film Pilihan Di NBRI Cinema Dan
+          Fitur Eksklusif Setelah Membuat Akun
+        </div>
+
+        <!-- Film Showcase Grid -->
+        <div class="grid-container">
+          <div
+            class="grid-item"
+            style="background-image: url('assets/image/TheLionKing.png')"
+            onclick="showPopup('The Lion King', 'Simba harus lari dan menyelamatkan diri dari jebakan pamannya, Scar, yang diam-diam mengincar tahta ayahnya. Setelah dewasa, dengan bantuan Timon dan Pumbaa, dia pun kembali untuk merebut haknya.', 'assets/image/TheLionKing.png')"
+          >
+            <div class="overlay">
+              <h3>The Lion King</h3>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/image/FastAndForious10.png')"
+            onclick="showPopup('Fast And Furious Series', 'Serangkaian film yang mengisahkan tentang kecepatan, aksi, dan persahabatan yang kuat di dunia balapan jalanan.', 'assets/image/FastAndForious10.png')"
+          >
+            <div class="overlay">
+              <h3>Fast And Furious Series</h3>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/image/Mission.jpeg')"
+            onclick="showPopup('Mission Impossible', 'Film ini mengikuti Ethan Hunt, seorang agen IMF, yang terjebak dalam berbagai misi berbahaya dan rumit.', 'assets/image/Mission.jpeg')"
+          >
+            <div class="overlay">
+              <h3>Mission</h3>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/image/TheFlash.jpg')"
+            onclick="showPopup('The Flash', 'Seorang pahlawan super dengan kemampuan berlari sangat cepat berjuang melawan kejahatan di kota Central.', 'assets/image/TheFlash.jpg')"
+          >
+            <div class="overlay">
+              <h3>The Flash</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up for Film Description -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="popup-header">
+          <div id="popup-image" class="popup-image"></div>
+          <div class="popup-description">
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/register-js.js"></script>
+  </body>
+</html>

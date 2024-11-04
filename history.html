@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riwayat Transaksi</title>
+    <link rel="stylesheet" href="assets/style/style-history.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar-container"></div>
+    <!-- Load navbar.html -->
+    <script>
+      fetch("partials/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+    <div class="container">
+      <div class="transaction-header">
+        <h2>Riwayat Transaksi</h2>
+        <div class="filter-options">
+          <select>
+            <option>Semua Status</option>
+            <option>Sukses</option>
+            <option>Gagal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <span class="status success">Berhasil</span>
+        <div class="transaction-details">
+          <img src="assets/image/TheLionKing.png" alt="Thumbnail" />
+          <div class="details">
+            <h3>The Lion King [Regular] x 1</h3>
+            <p>25 Okt 2024, 22:41</p>
+          </div>
+          <div class="button-container">
+            <button class="button details">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

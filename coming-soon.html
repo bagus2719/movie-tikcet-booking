@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Now Playing</title>
+    <link rel="stylesheet" href="assets/style/styles.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <!-- Load navbar.html -->
+    <script>
+      fetch("partials/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+    <section class="now-playing">
+      <div class="now-playing-header">
+        <h2>Coming Soon</h2>
+      </div>
+      <div class="movie-grid">
+        <!-- Spiderman -->
+        <div class="movie-card">
+          <img src="assets/image/Spiderman.png" alt="Spiderman" />
+          <div class="movie-info">
+            <h3>Spiderman</h3>
+            <p>Released: 2021</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guardians of the Galaxy -->
+        <div class="movie-card">
+          <img src="assets/image/Guardians.png" alt="Guardians of the Galaxy" />
+          <div class="movie-info">
+            <h3>Guardians of the Galaxy</h3>
+            <p>Released: 2014</p>
+            <p>12+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inception -->
+        <div class="movie-card">
+          <img src="assets/image/Inception.png" alt="Inception" />
+          <div class="movie-info">
+            <h3>Inception</h3>
+            <p>Released: 2010</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Dark Knight -->
+        <div class="movie-card">
+          <img src="assets/image/DarkKnight.png" alt="The Dark Knight" />
+          <div class="movie-info">
+            <h3>The Dark Knight</h3>
+            <p>Released: 2008</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Black Panther -->
+        <div class="movie-card">
+          <img src="assets/image/BlackPanther.png" alt="Black Panther" />
+          <div class="movie-info">
+            <h3>Black Panther</h3>
+            <p>Released: 2018</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+        <!-- Avatar 2 -->
+        <div class="movie-card">
+          <img src="assets/image/avatar2.jpeg" alt="Avatar 2" />
+          <div class="movie-info">
+            <h3>Avatar 2</h3>
+            <p>Coming: December 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Flash -->
+        <div class="movie-card">
+          <img src="assets/image/TheFlash.jpg" alt="The Flash" />
+          <div class="movie-info">
+            <h3>The Flash</h3>
+            <p>Coming: July 2024</p>
+            <p>Age: 12+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission: Impossible 7 -->
+        <div class="movie-card">
+          <img src="assets/image/Mission.jpeg" alt="Mission: Impossible 7" />
+          <div class="movie-info">
+            <h3>Mission: Impossible 7</h3>
+            <p>Coming: May 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jurassic World: Dominion -->
+        <div class="movie-card">
+          <img
+            src="assets/image/JurassicWorld.jpeg"
+            alt="Jurassic World: Dominion"
+          />
+          <div class="movie-info">
+            <h3>Jurassic World: Dominion</h3>
+            <p>Coming: June 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fast and Forious -->
+        <div class="movie-card">
+          <img
+            src="assets/image/FastAndForious10.png"
+            alt="Fast & Furious 10"
+          />
+          <div class="movie-info">
+            <h3>Fast & Furious 10</h3>
+            <p>Coming: April 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </body>
+</html>

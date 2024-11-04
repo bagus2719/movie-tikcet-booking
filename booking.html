@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App | Booking</title>
+    <link rel="stylesheet" href="assets/style/style-booking.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <script>
+      fetch("partials/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+    <!-- Booking Section -->
+    <div class="booking-container">
+      <h1>Pesan Tiket Film</h1>
+      <form class="booking-form">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Nama Lengkap" />
+
+        <label for="film">Pilih Film</label>
+        <select id="film" name="film" required>
+          <option value="Movie 1">Movie 1</option>
+          <option value="Movie 2">Movie 2</option>
+          <option value="Movie 3">Movie 3</option>
+        </select>
+
+        <label for="date">Tanggal</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Waktu</label>
+        <input type="time" id="time" name="time" required />
+
+        <label for="seats">Nomor Kursi</label>
+        <input
+          type="text"
+          id="seats"
+          name="seats"
+          placeholder="Contoh: A3, B5"
+          required
+        />
+
+        <label for="ticket-type">Jenis Tiket</label>
+        <select id="ticket-type" name="ticket-type" required>
+          <option value="Regular">Regular</option>
+          <option value="VIP">VIP</option>
+          <option value="VVIP">VVIP</option>
+        </select>
+
+        <button type="submit" class="btn-submit">Pesan Sekarang</button>
+      </form>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

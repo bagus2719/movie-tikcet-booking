@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="assets/style/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Load navbar.html -->
+    <script>
+      fetch("partials/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+    <!-- Movie Banner Section -->
+    <section class="movie-banner">
+      <div class="overlay"></div>
+      <div class="movie-info">
+        <h1 id="movie-title">Spider-Man: No Way Home</h1>
+        <p class="rating" id="movie-rating">
+          <strong>IMDB:</strong> 8.2 (12,827) | 2021 | 1 hour 55 minutes |
+          Sci-fi
+        </p>
+        <p class="description" id="movie-description">
+          Scelerisque sed ultricies tristique. Mi in vivamus aliquam varius eu
+          felis.
+        </p>
+        <div class="buttons">
+          <a href="detail.html">
+            <button class="btn-detail">Detail Film</button>
+          </a>
+          <a href="#">
+            <button class="btn-trailer">Watch Trailer</button>
+          </a>
+        </div>
+      </div>
+      <div class="movie-image" id="movie-image">
+        <img src="assets/image/Spiderman.png" alt="Movies" />
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <div
+          class="carousel-item active"
+          onclick="selectMovie('Spider-Man: No Way Home', '8.2 (12,827) | 2021 | 1 hour 55 minutes | Sci-fi', 'Scelerisque sed ultricies tristique.', 'assets/image/Spiderman.png')"
+        >
+          <img src="assets/image/Spiderman.png" alt="Movie 1" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Avengers: Endgame', '8.4 (15,827) | 2019 | 3 hours 2 minutes | Action', 'The Avengers assemble once more.', 'assets/image/Avengers.jpg')"
+        >
+          <img src="assets/image/Avengers.jpg" alt="Movie 2" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Shang-Chi', '7.5 (10,827) | 2021 | 2 hours 12 minutes | Action', 'Shang-Chi must confront his past.', 'assets/image/ShangChi.png')"
+        >
+          <img src="assets/image/ShangChi.png" alt="Movie 3" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Aquaman', '7.0 (9,827) | 2018 | 2 hours 23 minutes | Action', 'Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis.', 'assets/image/Aquaman.jpg')"
+        >
+          <img src="assets/image/Aquaman.jpg" alt="Movie 4" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Black Panther', '7.3 (15,827) | 2018 | 2 hours 14 minutes | Action', 'Challa must defend his throne.', 'assets/image/BlackPanther.png')"
+        >
+          <img src="assets/image/BlackPanther.png" alt="Movie 5" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Wonder Woman', '7.4 (12,000) | 2017 | 2 hours 21 minutes | Action', 'Diana Prince embarks on a journey to save the world.', 'assets/image/WonderWoman.png')"
+        >
+          <img src="assets/image/WonderWoman.png" alt="Movie 6" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Guardians of the Galaxy', '8.0 (20,000) | 2014 | 2 hours 1 minute | Action', 'A group of intergalactic criminals must pull together.', 'assets/image/Guardians.png')"
+        >
+          <img src="assets/image/Guardians.png" alt="Movie 7" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Inception', '8.8 (18,000) | 2010 | 2 hours 28 minutes | Sci-fi', 'A thief who steals corporate secrets must perform the impossible.', 'assets/image/Inception.png')"
+        >
+          <img src="assets/image/Inception.png" alt="Movie 8" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('The Dark Knight', '9.0 (24,000) | 2008 | 2 hours 32 minutes | Action', 'Batman must face the Joker.', 'assets/image/DarkKnight.png')"
+        >
+          <img src="assets/image/DarkKnight.png" alt="Movie 9" />
+        </div>
+        <div
+          class="carousel-item"
+          onclick="selectMovie('Dune', '8.0 (10,000) | 2021 | 2 hours 35 minutes | Sci-fi', 'Paul Atreides must navigate the dangerous desert planet.', 'assets/image/Dune.png')"
+        >
+          <img src="assets/image/Dune.png" alt="Movie 10" />
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button id="prev" onclick="prevSlide()">&#10094;</button>
+        <button id="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="now-playing">
+      <div class="now-playing-header">
+        <h2>Now Playing</h2>
+        <a href="#" class="see-more">See more &rarr;</a>
+      </div>
+      <div class="movie-grid">
+        <!-- Spiderman -->
+        <div class="movie-card">
+          <img src="assets/image/Spiderman.png" alt="Spiderman" />
+          <div class="movie-info">
+            <h3>Spiderman</h3>
+            <p>Released: 2021</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guardians of the Galaxy -->
+        <div class="movie-card">
+          <img src="assets/image/Guardians.png" alt="Guardians of the Galaxy" />
+          <div class="movie-info">
+            <h3>Guardians of the Galaxy</h3>
+            <p>Released: 2014</p>
+            <p>12+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inception -->
+        <div class="movie-card">
+          <img src="assets/image/Inception.png" alt="Inception" />
+          <div class="movie-info">
+            <h3>Inception</h3>
+            <p>Released: 2010</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Dark Knight -->
+        <div class="movie-card">
+          <img src="assets/image/DarkKnight.png" alt="The Dark Knight" />
+          <div class="movie-info">
+            <h3>The Dark Knight</h3>
+            <p>Released: 2008</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Black Panther -->
+        <div class="movie-card">
+          <img src="assets/image/BlackPanther.png" alt="Black Panther" />
+          <div class="movie-info">
+            <h3>Black Panther</h3>
+            <p>Released: 2018</p>
+            <p>13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+      <div class="coming-soon-header">
+        <h2>Coming Soon</h2>
+        <a href="#" class="see-more">See more &rarr;</a>
+      </div>
+      <div class="movie-grid">
+        <!-- Avatar 2 -->
+        <div class="movie-card">
+          <img src="assets/image/avatar2.jpeg" alt="Avatar 2" />
+          <div class="movie-info">
+            <h3>Avatar 2</h3>
+            <p>Coming: December 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Flash -->
+        <div class="movie-card">
+          <img src="assets/image/TheFlash.jpg" alt="The Flash" />
+          <div class="movie-info">
+            <h3>The Flash</h3>
+            <p>Coming: July 2024</p>
+            <p>Age: 12+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission: Impossible 7 -->
+        <div class="movie-card">
+          <img src="assets/image/Mission.jpeg" alt="Mission: Impossible 7" />
+          <div class="movie-info">
+            <h3>Mission: Impossible 7</h3>
+            <p>Coming: May 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jurassic World: Dominion -->
+        <div class="movie-card">
+          <img
+            src="assets/image/JurassicWorld.jpeg"
+            alt="Jurassic World: Dominion"
+          />
+          <div class="movie-info">
+            <h3>Jurassic World: Dominion</h3>
+            <p>Coming: June 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Es</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fast and Forious -->
+        <div class="movie-card">
+          <img
+            src="assets/image/FastAndForious10.png"
+            alt="Fast & Furious 10"
+          />
+          <div class="movie-info">
+            <h3>Fast & Furious 10</h3>
+            <p>Coming: April 2024</p>
+            <p>Age: 13+</p>
+            <div class="languages">
+              <span>En</span>
+              <span>Fr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="assets/js/app.js"></script>
+</html>

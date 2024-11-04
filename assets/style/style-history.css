@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* Start from left */
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo Container */
+.logo-container {
+  margin-right: 650px;
+}
+
+/* Text Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fbc02d;
+}
+
+.highlight {
+  color: white; /* Color for "Cinema" text */
+}
+
+/* Navbar Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-left: auto; /* Shift the navigation menu to the right */
+}
+
+.navbar ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.navbar ul a:hover {
+  color: #fbc02d; /* Hover color for navigation links */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Tersembunyi di layar besar */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #7c6300;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Additional style for profile menu dropdown */
+.profile-dropdown {
+  right: 0;
+  left: auto;
+  min-width: 150px;
+  background-color: #222;
+  border: 1px solid #444;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.search-container input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.search-container button {
+  padding: 8px 12px;
+  background-color: #fbc02d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #7c6300;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Menyembunyikan menu di layar kecil */
+    flex-direction: column; /* Mengatur menu menjadi kolom */
+    width: 100%; /* Memastikan lebar menu 100% */
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 80px; /* Mengatur posisi menu */
+    left: 0;
+    z-index: 10;
+  }
+
+  .navbar ul.active {
+    display: flex; /* Menampilkan menu jika aktif */
+  }
+
+  .hamburger {
+    display: flex; /* Menampilkan hamburger di layar kecil */
+  }
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e1e1e; /* Darker background for the container */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Transaction Header */
+.transaction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.transaction-header h2 {
+  font-size: 1.8rem;
+  color: #fbc02d;
+}
+
+/* Filter Options */
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-options select {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for selects */
+  color: white; /* White text color for selects */
+}
+
+/* Transaction Item */
+.transaction-item {
+  background-color: #222; /* Dark background for transaction items */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.transaction-item img {
+  max-width: 150px; /* Perbesar ukuran maksimal gambar */
+  max-height: 150px; /* Perbesar tinggi maksimal gambar */
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .transaction-item img {
+    max-width: 50px; /* Ukuran lebih besar pada mobile */
+    max-height: 50px; /* Maintain aspect ratio on mobile */
+  }
+
+  .transaction-header h2 {
+    font-size: 1.5rem; /* Adjust header font size on mobile */
+  }
+
+  .transaction-details h3 {
+    font-size: 1rem; /* Adjust title size for mobile */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .transaction-item img {
+    max-width: 40px; /* Smaller size on mobile */
+    max-height: 40px; /* Maintain aspect ratio on mobile */
+  }
+
+  .transaction-header h2 {
+    font-size: 1.5rem; /* Adjust header font size on mobile */
+  }
+
+  .transaction-details h3 {
+    font-size: 1rem; /* Adjust title size for mobile */
+  }
+}
+/* Transaction Details */
+.transaction-details {
+  display: flex;
+  align-items: center;
+}
+
+.transaction-details .details {
+  flex-grow: 1; /* Takes remaining space */
+}
+
+.transaction-details h3 {
+  font-size: 1.2rem;
+  color: #fbc02d; /* Highlight color for titles */
+  margin-bottom: 5px;
+}
+
+.transaction-details p {
+  margin: 5px 0;
+  color: #ccc; /* Light gray for other text */
+}
+
+/* Status */
+.status {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status.success {
+  background-color: #28a745; /* Green for successful status */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 150px;
+}
+
+.button {
+  padding: 8px 12px;
+  background-color: #fbc02d; /* Button background color */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #7c6300; /* Darker button on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .transaction-header {
+    flex-direction: column;
+  }
+}

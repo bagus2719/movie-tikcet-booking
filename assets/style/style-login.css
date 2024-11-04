@@ -1,0 +1,131 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Overlay */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.background-text {
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.05);
+  user-select: none;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center; /* Center the login container */
+  align-items: center; /* Center the login container vertically */
+}
+
+/* Login Container Styles */
+.login-container {
+  width: 40%; /* Ukuran form */
+  padding: 25px;
+  margin: 20px; /* Menambah margin di sekitar form */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Transparan */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Menyusun elemen agar memenuhi lebar */
+}
+
+.form-title {
+  color: #fff;
+  margin-bottom: 15px; /* Mengurangi jarak bawah untuk judul */
+  font-size: 2rem; /* Ukuran font judul lebih besar */
+  font-weight: bold; /* Bold font for Login */
+}
+
+label {
+  font-size: 14px;
+  color: #ccc;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 10px 0; /* Mengurangi margin bawah */
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #FF6347;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 10px; /* Mengurangi jarak atas untuk tombol */
+}
+
+button:hover {
+  background-color: #FF4500;
+  transform: scale(1.05);
+}
+
+.toggle-message {
+  text-align: center;
+  margin-top: 25px; /* Mengurangi margin atas */
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.register-button {
+  background: none;
+  border: none;
+  color: white; /* Change to white */
+  text-decoration: underline;
+  cursor: pointer;
+  align-self: center;
+}
+
+.register-button:hover {
+  color: #FF4500;
+}
